@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
@@ -31,7 +31,6 @@ function App() {
   const [totalRecords, setTotalRecords] = useState(0);
   const [page, setPage] = useState(0);
   const [selectedProducts, setSelectedProducts] = useState<RowData[]>([]);
-  const [rowClick, setRowClick] = useState(true);
 
   useEffect(() => {
     fetchData(page).then(({ data, total }) => {
